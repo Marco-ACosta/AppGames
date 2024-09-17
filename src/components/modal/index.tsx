@@ -1,5 +1,4 @@
 import { Modal, StyleSheet, View, Text, Button } from "react-native"
-import { Video } from 'expo-av';
 import YoutubeIframe from 'react-native-youtube-iframe';
 interface Game {
     id: number;
@@ -27,7 +26,7 @@ const ModalGame = ({ modalVisible, selectedGame, handleCloseModal }: { modalVisi
             <View style={styles.content}>
               <Text style={styles.title}> {selectedGame.name}</Text>
 
-              <YoutubeIframe videoId={selectedGame.trailerUrl} height={100}/>
+              <YoutubeIframe videoId={selectedGame.trailerUrl} height={300} width={300}/>
               <Button title="Fechar " onPress={handleCloseModal}/>
             </View>
           )}
